@@ -1,6 +1,7 @@
 # [TruffleHog Enterprise](https://trufflesecurity.com/) GitHub Action
 
-[![License](https://img.shields.io/github/license/trufflesecurity/Trufflehog-Enterprise-Github-Action?color=green&style=for-the-badge)](LICENSE)
+[![GitHub Marketplace](https://img.shields.io/badge/Actions-Marketplace-undefined.svg?logo=github&logoColor=white&style=for-the-badge)](https://github.com/marketplace/actions/trufflehog-enterprise)
+[![License](https://img.shields.io/github/license/trufflesecurity/TruffleHog-Enterprise-Github-Action?color=green&style=for-the-badge)](LICENSE)
 
 Find exposed credentials in your CI using [**TruffleHog Enterprise**](https://trufflesecurity.com/).
 
