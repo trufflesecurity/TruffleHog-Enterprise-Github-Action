@@ -1,0 +1,31 @@
+name: 'TruffleHog Enterprise'
+description: 'Scan Github Actions with TruffleHog Enterprise'
+author: Truffle Security Co. <support@trufflesec.com>
+
+inputs:
+  args:
+    description: |
+      Flags:
+            --help                  Show context-sensitive help (also try --help-long and --help-man).
+        -v, --debug                 Enable debug mode.
+            --trace                 Enable tracing of code line numbers.
+            --json                  Enable JSON output.
+            --send-error-telemetry  Turns error telemetry off.
+            --fail-verified         Only emit failure code for verified findings.
+            --quiet                 Only show results.
+            --config=CONFIG         Path to configuration file. You can also specify Google Secrets Manager secrets with
+                                    'gsm://<project_id>/<secret_name>'.
+
+      Args:
+        <base>       Start scanning from here (usually main branch).
+        <head>       Scan commits until here (usually dev branch).
+        [<workdir>]  Optional path to the repo to scan.
+    required: false
+branding:
+  icon: "shield"
+  color: "green"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.args }}
