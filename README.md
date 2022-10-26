@@ -5,25 +5,6 @@
 
 Find exposed credentials in your CI using [**TruffleHog Enterprise**](https://trufflesecurity.com/).
 
-## Requirements
-
-- You must have a TruffleHog Enterprise instance. You can [inquire](https://trufflesecurity.com/contact) to obtain one.
-- You must have added a new scanner group to use with CI.
-
-### Project secrets
-
-Three environment variables are required to run TruffleHog Enterprise:
-
-```bash
-TRUFFLEHOG_API_ADDRESS
-TRUFFLEHOG_SCANNER_GROUP
-TRUFFLEHOG_SCANNER_TOKEN
-```
-
-The values for these variables can be obtained from the downloaded configuration when you add a new scanner group on your instance.
-
-Alternatively, these values can be provided by [other means](https://docs.trufflesecurity.com/docs/configuration/secrets-management/).
-
 ## Usage
 
 Add a new job to your GitHub workflow using the `trufflesecurity/TruffleHog-Enterprise-Github-Action` action.
@@ -46,10 +27,6 @@ jobs:
         uses: trufflesecurity/TruffleHog-Enterprise-Github-Action@main
         with:
             args: --fail-verified ${{ github.event.repository.default_branch }} HEAD
-        env:
-          TRUFFLEHOG_API_ADDRESS: ${{ secrets.TRUFFLEHOG_API_ADDRESS }}
-          TRUFFLEHOG_SCANNER_GROUP: ${{ secrets.TRUFFLEHOG_SCANNER_GROUP }}
-          TRUFFLEHOG_SCANNER_TOKEN: ${{ secrets.TRUFFLEHOG_SCANNER_TOKEN }}
 ```
 
 Be sure to set the repository or organization secrets on GitHub with the variables that are referenced above.
