@@ -21,6 +21,7 @@ inputs:
         <head>       Scan commits until here (usually dev branch).
         [<workdir>]  Optional path to the repo to scan.
     required: false
+    deprecationMessage: This action is deprecated. Please use the open-source scanner to scan via GitHub actions, as described at https://github.com/trufflesecurity/trufflehog?tab=readme-ov-file#octocat-trufflehog-github-action.
 branding:
   icon: "shield"
   color: "green"

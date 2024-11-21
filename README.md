@@ -5,6 +5,9 @@
 
 Find exposed credentials in your CI using [**TruffleHog Enterprise**](https://trufflesecurity.com/).
 
+> [!IMPORTANT]
+> This action is deprecated. Please instead [use the open-source tool to scan as a GitHub action](https://github.com/trufflesecurity/trufflehog?tab=readme-ov-file#octocat-trufflehog-github-action).
+
 ## Usage
 
 Add a new job to your GitHub workflow using the `trufflesecurity/TruffleHog-Enterprise-Github-Action` action.
